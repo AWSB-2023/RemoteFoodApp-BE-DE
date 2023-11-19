@@ -28,10 +28,9 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public void updateUser(User user, Long userId) {
-        userRepo.updateById(user,userId);
+    public void updateUser(User user) {
+        userRepo.save(user);
     }
-
     @Override
     public List<User> getUser(List<Long> userId) {
         return userRepo.findAllById(userId);

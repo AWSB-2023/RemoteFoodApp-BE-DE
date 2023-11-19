@@ -26,8 +26,8 @@ public class UserController {
         userService.deleteUser(userid);
     }
     @PutMapping
-    public void updateUser(@RequestBody User user,Long userId) {
-        userService.updateUser(user,userId);
+    public void updateUser(@RequestBody User user) {
+        userService.updateUser(user);
     }
     @GetMapping
     public List<User> getUsers(List<Long> userId) {
